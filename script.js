@@ -1,27 +1,28 @@
-const myArray = ["Rock", "Paper", "Scissors"];
+const compChoice = ["Rock", "Paper", "Scissors"]
 
 function computerPlay() {
-  return myArray[~~(Math.random() * myArray.length)];
-}
+    return compChoice[~~(Math.random() * compChoice.length)];
+};
 
-let playerSelection = "Rock";
-let computerSelection = computerPlay();
+let playerSelection = prompt('Rock, Paper, or Scissors?');
+let computerSelection = computerPlay().toLowerCase();
+console.log(playerSelection)
+console.log(computerSelection)
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        return `You Lose! Paper beats Rock`
-    }
-    if (playerSelection == "Rock" && computerSelection == "Paper") {
-        return `You Win! Rock beats Paper`
-    } else {
-        return `You Tied`
-    }
-}
+    if (playerSelection == computerSelection) {
+        return `It's a Tie!`
+    } else if 
+     (playerSelection == "rock" && computerSelection == "scissors" ||
+      playerSelection == "paper" && computerSelection == "rock" ||
+      playerSelection == "scissors" && computerSelection == "paper") {   
+        return `Player Wins!`
+    } else if 
+     (playerSelection == "rock" && computerSelection == "paper" ||
+      playerSelection == "paper" && computerSelection == "scissors" || 
+      playerSelection == "scissors" && computerSelection == "rock") {  
+    }   return `You Lose!` 
+};
+console.log(playRound(playerSelection, computerSelection));
 
-/* Needs Work Below*/
 
-function game() {
-    return playRound(playerSelection, computerSelection);
-}
-
-console.log(game())
