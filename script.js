@@ -63,8 +63,10 @@ function game(){
     if(playerPoints > computerPoints){
       console.log('');
       console.log("Congratulations!  You beat the computer " + playerPoints + " to " + computerPoints);
-    } else {
+    } else if (computerPoints > playerPoints) {
       console.log("Sorry!  You lost to the computer " + computerPoints + " to " + playerPoints);
+    } else {
+        console.log("You tied")
     }
   } // end game();
   
