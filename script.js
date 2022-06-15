@@ -30,6 +30,7 @@ function game() {
         let computerSelection = computerPlay().toLowerCase();
         playRound(playerSelection, computerSelection);
         console.log(playerSelection, computerSelection);
+        console.log(playerScore, computerScore);
     }
     if (playerScore > computerScore) {
         console.log('Player Wins!')
@@ -40,5 +41,4 @@ function game() {
     }
 };
 
-console.log(playerScore, computerScore);
-console.log(game());
+// game();
